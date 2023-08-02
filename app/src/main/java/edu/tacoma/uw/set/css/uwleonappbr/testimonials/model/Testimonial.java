@@ -5,6 +5,8 @@ package edu.tacoma.uw.set.css.uwleonappbr.testimonials.model;
  */
 public class Testimonial {
 
+    // Example
+
     public final static String SEATTLE = "Seattle";
 
     public final static String TACOMA = "Tacoma";
