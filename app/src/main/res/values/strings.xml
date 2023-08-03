@@ -14,4 +14,5 @@
     <string name="testimonial_title">Testimonial Title</string>
     <string name="testimonial_content">Testimonial Content</string>
     <string name="preview_testimonial">Preview Testimonial</string>
+    <string name="submit_testimonial">Submit Testimonial</string>
 </resources>
