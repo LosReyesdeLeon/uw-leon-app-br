@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +14,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.time.Year;
 import java.util.Calendar;
 
-import edu.tacoma.uw.set.css.uwleonappbr.R;
 import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentSubmitStudentInfoBinding;
 import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
-import edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.SubmitStudentInfoFragmentDirections;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,8 +55,8 @@ public class SubmitStudentInfoFragment extends Fragment {
             Toast.makeText(getContext(), "You cannot leave the ID field blank.", Toast.LENGTH_SHORT).show();
             return;
         }
-        String campus = "";
-        String season = "";
+        String campus;
+        String season;
         if (getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup) != null
                 && getSelectedStringFromRadioButtonGroup(mBinding.seasonButtonGroup) != null) {
             campus = getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup);
