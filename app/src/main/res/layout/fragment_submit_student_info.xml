@@ -1,14 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".testimonials.views.SubmitStudentInfoFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_info_prompt"
+            android:layout_marginVertical="20dp"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/name"
+            android:paddingVertical="20dp"/>
+
+        <EditText
+            android:id="@+id/editStudentIDField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/student_id_number"
+            android:paddingVertical="20dp"
+            android:maxLength="7"/>
+
+        <RadioGroup
+            android:id="@+id/campusButtonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="20dp"
+            android:layout_marginLeft="30dp">
+
+            <RadioButton
+                android:id="@+id/seattleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seattle" />
+
+            <RadioButton
+                android:id="@+id/tacomaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tacoma" />
+
+            <RadioButton
+                android:id="@+id/bothellButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bothell" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editMajorField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/major"
+            android:paddingVertical="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/seasonButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/editYearField"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingVertical="20dp">
+
+                <RadioButton
+                    android:id="@+id/springButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spring" />
+
+                <RadioButton
+                    android:id="@+id/summerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summer" />
+
+                <RadioButton
+                    android:id="@+id/fallButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fall" />
+
+                <RadioButton
+                    android:id="@+id/winterButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/winter" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editYearField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintLeft_toRightOf="@id/seasonButtonGroup"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/yyyy"
+                android:paddingVertical="20dp"
+                android:maxLength="4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_info"
+            android:paddingVertical="20dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp" />
+
+    </LinearLayout>
+</ScrollView>

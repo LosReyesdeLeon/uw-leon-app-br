@@ -82,6 +82,10 @@ public class Testimonial {
         return studentCampus;
     }
 
+    public String getStudentMajor() {
+        return studentMajor;
+    }
+
     public String getProgramSeason() {
         return programSeason;
     }
