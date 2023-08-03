@@ -21,6 +21,7 @@ import java.util.Calendar;
 import edu.tacoma.uw.set.css.uwleonappbr.R;
 import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentSubmitStudentInfoBinding;
 import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
+import edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.SubmitStudentInfoFragmentDirections;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +29,8 @@ import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
 public class SubmitStudentInfoFragment extends Fragment {
 
     private FragmentSubmitStudentInfoBinding mBinding;
+
+    private Testimonial mTestimonial;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -43,11 +46,19 @@ public class SubmitStudentInfoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mBinding.submitStudentInfoButton.setOnClickListener(button -> processStudentInfo());
+
+        mTestimonial = null;
     }
 
     private void processStudentInfo() {
         String name = mBinding.editNameField.getText().toString();
-        int studentID = Integer.parseInt(mBinding.editStudentIDField.getText().toString());
+        int studentID;
+        try {
+            studentID = Integer.parseInt(mBinding.editStudentIDField.getText().toString());
+        } catch (NumberFormatException e) {
+            Toast.makeText(getContext(), "You cannot leave the ID field blank.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         String campus = "";
         String season = "";
         if (getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup) != null
@@ -62,9 +73,10 @@ public class SubmitStudentInfoFragment extends Fragment {
         int year = Integer.parseInt(mBinding.editYearField.getText().toString());
         String major = mBinding.editMajorField.getText().toString();
         if (!hasErrors(name, studentID, year, major)) {
-            // TODO: First I have to set up the navigation, and then I will program this to move on
-            // to the next fragment.
-            Navigation.findNavController(getView()).navigate(R.id.action_submitStudentInfoFragment_to_submitTestimonialFragment);
+            mTestimonial = new Testimonial(studentID, name, campus, major, season, year);
+            SubmitStudentInfoFragmentDirections.ActionSubmitStudentInfoFragmentToSubmitTestimonialFragment directions =
+                    SubmitStudentInfoFragmentDirections.actionSubmitStudentInfoFragmentToSubmitTestimonialFragment(mTestimonial);
+            Navigation.findNavController(getView()).navigate(directions);
         }
         // If it has errors, the hasErrors method will print the toast. We just want to stop so we
         // don't process invalid information.
