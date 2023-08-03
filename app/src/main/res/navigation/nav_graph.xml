@@ -29,5 +29,9 @@
         android:id="@+id/testimonialPreviewFragment"
         android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.TestimonialPreviewFragment"
         android:label="fragment_testimonial_preview"
-        tools:layout="@layout/fragment_testimonial_preview" />
+        tools:layout="@layout/fragment_testimonial_preview" >
+        <argument
+            android:name="testimonial"
+            app:argType="edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial" />
+    </fragment>
 </navigation>
