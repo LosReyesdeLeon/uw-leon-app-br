@@ -15,4 +15,5 @@
     <string name="testimonial_content">Contenido del Testimonio</string>
     <string name="preview_testimonial">Vista Previa del Testimonio</string>
     <string name="submit_testimonial">Entregar Testimonio</string>
+    <string name="home_page_greeting">UW Centro Leon</string>
 </resources>
