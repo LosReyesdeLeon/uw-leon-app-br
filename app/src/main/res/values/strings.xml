@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">UW Leon App BR</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spring">Spring</string>
+    <string name="summer">Summer</string>
+    <string name="fall">Fall</string>
+    <string name="winter">Winter</string>
+    <string name="yyyy">YYYY</string>
+    <string name="name">Name</string>
+    <string name="student_id_number">Student ID Number (7 Digits)</string>
+    <string name="major">Major</string>
+    <string name="submit_info">Submit Info</string>
+    <string name="submit_info_prompt">Please answer some identifying questions.</string>
+    <string name="hello_blank_fragment" translatable="false">Hi</string>
+    <string name="testimonial_title">Testimonial Title</string>
+    <string name="testimonial_content">Testimonial Content</string>
+    <string name="preview_testimonial">Preview Testimonial</string>
+    <string name="submit_testimonial">Submit Testimonial</string>
 </resources>
