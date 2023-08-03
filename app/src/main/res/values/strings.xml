@@ -11,4 +11,7 @@
     <string name="submit_info">Submit Info</string>
     <string name="submit_info_prompt">Please answer some identifying questions.</string>
     <string name="hello_blank_fragment" translatable="false">Hi</string>
+    <string name="testimonial_title">Testimonial Title</string>
+    <string name="testimonial_content">Testimonial Content</string>
+    <string name="preview_testimonial">Preview Testimonial</string>
 </resources>

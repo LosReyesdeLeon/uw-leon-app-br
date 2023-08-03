@@ -11,4 +11,7 @@
     <string name="major">Especialidad</string>
     <string name="submit_info">Entregar Información</string>
     <string name="submit_info_prompt">Por favor contesta algunas preguntas para identificarte.</string>
+    <string name="testimonial_title">Título del Testimonio</string>
+    <string name="testimonial_content">Contenido del Testimonio</string>
+    <string name="preview_testimonial">Vista Previa del Testimonio</string>
 </resources>
