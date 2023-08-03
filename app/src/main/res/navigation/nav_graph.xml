@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_submitTestimonialFragment_to_testimonialPreviewFragment"
             app:destination="@id/testimonialPreviewFragment" />
+        <argument
+            android:name="testimonial"
+            app:argType="edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial" />
     </fragment>
     <fragment
         android:id="@+id/testimonialPreviewFragment"
