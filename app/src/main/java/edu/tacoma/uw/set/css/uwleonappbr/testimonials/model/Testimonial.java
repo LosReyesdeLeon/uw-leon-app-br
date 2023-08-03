@@ -4,7 +4,7 @@ package edu.tacoma.uw.set.css.uwleonappbr.testimonials.model;
  * @author Devin Peevy
  */
 public class Testimonial {
-
+    //An Test
     public final static String SEATTLE = "Seattle";
 
     public final static String TACOMA = "Tacoma";
