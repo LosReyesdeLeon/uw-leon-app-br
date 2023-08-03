@@ -27,6 +27,8 @@ public class Testimonial {
 
     private final String studentCampus;
 
+    private final String studentMajor;
+
     private final String programSeason;
 
     private String testimonialTitle;
@@ -38,17 +40,20 @@ public class Testimonial {
      * @param studentID 7 digit UW student id number.
      * @param studentName The first and last name of the student.
      * @param studentCampus The UW campus the student normally attends: SEATTLE, TACOMA, or BOTHELL.
+     * @param studentMajor The student's UW major.
      * @param programSeason The season of the student's program: SPRING, SUMMER, FALL, or WINTER.
      * @param programYear 4 digit year of the student's program.
      */
     public Testimonial(int studentID,
                        String studentName,
                        String studentCampus,
+                       String studentMajor,
                        String programSeason,
                        int programYear) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentCampus = studentCampus;
+        this.studentMajor = studentMajor;
         this.programSeason = programSeason + " " + programYear;
         this.testimonialTitle = null;
         this.testimonialContent = null;
