@@ -44,7 +44,7 @@ public class TestimonialsRecyclerViewAdapter
         holder.studentmajor.setText(testimonialsList.get(position).getStudentMajor());
         holder.titleT.setText(testimonialsList.get(position).getTestimonialTitle());
         holder.contentT.setText(testimonialsList.get(position).getTestimonialContent());
-        holder.studentImageView.setImageResource(testimonialsList.get(position).getImage());
+        holder.studentImageView.setImageResource(testimonialsList.get(position).getImageStudent());
 
 
 

@@ -1,5 +1,154 @@
 <resources>
     <string name="app_name">UW Leon App BR</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Student IDs -->
+    <integer-array name="student_ids">
+        <item>12345678</item>
+        <item>87654321</item>
+        <item>56781234</item>
+        <item>12345678</item>
+        <item>87654321</item>
+        <item>56781234</item>
+        <item>12345678</item>
+        <item>87654321</item>
+        <item>56781234</item>
+        <item>56781234</item>
+    </integer-array>
+    <!-- Testimonial Names -->
+    <string-array name="student_names">
+        <item>Alice Johnson</item>
+        <item>Bob Smith</item>
+        <item>Susan Lee</item>
+        <item>Michael Brown</item>
+        <item>Emily Wilson</item>
+        <item>David Anderson</item>
+        <item>Lisa Martinez</item>
+        <item>James Turner</item>
+        <item>Sophia White</item>
+        <item>Oliver Garcia</item>
+    </string-array>
+
+    <!-- Testimonial Campuses -->
+    <string-array name="uw_campuses">
+        <item>UW Tacoma</item>
+        <item>UW Seattle</item>
+        <item>UW Bothell</item>
+        <item>UW Tacoma</item>
+        <item>UW Seattle</item>
+        <item>UW Tacoma</item>
+        <item>UW Seattle</item>
+        <item>UW Bothell</item>
+        <item>UW Bothell</item>
+        <item>UW Bothell</item>
+
+    </string-array>
+
+    <!-- Testimonial  Years -->
+    <integer-array name="uw_years">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2022</item>
+    </integer-array>
+
+
+    <!-- Testimonial Quarters -->
+    <string-array name="uw_quarters">
+        <item>Fall 2022</item>
+        <item>Spring 2023</item>
+        <item>Summer 2022</item>
+        <item>Winter 2023</item>
+        <item>Spring 2022</item>
+        <item>Fall 2023</item>
+        <item>Summer 2023</item>
+        <item>Winter 2022</item>
+        <item>Spring 2022</item>
+        <item>Winter 2023</item>
+    </string-array>
+    <!-- College Majors -->
+    <string-array name="uw_majors">
+        <item>Computer Science</item>
+        <item>Business Administration</item>
+        <item>Psychology</item>
+        <item>Engineering (Mechanical)</item>
+        <item>Biology</item>
+        <item>Communication Studies</item>
+        <item>Art History</item>
+        <item>Economics</item>
+        <item>Nursing</item>
+        <item>Political Science</item>
+    </string-array>
+    <!-- Testimonial Titles -->
+    <string-array name="testimonial_titles">
+        <item>Excellent Supportive Environment</item>
+        <item>Inspiring Professors</item>
+        <item>Unforgettable Memories</item>
+        <item>Preparing for the Future</item>
+        <item>Supportive Community</item>
+        <item>Transformative Education</item>
+        <item>Welcoming Campus Community</item>
+        <item>Internship Opportunities</item>
+        <item>Empowering Learning Environment</item>
+        <item>Building Lifelong Friendships</item>
+    </string-array>
+
+    <!-- Testimonial Contents -->
+    <string-array name="testimonial_contents">
+    <item>
+        Studying at UW Tacoma has been a life-changing experience for me. The campus environment is inclusive and fosters both personal and academic growth. I have made lifelong friends and developed valuable connections with faculty and mentors. UW Tacoma has truly prepared me for a successful future.
+    </item>
+        <item>
+        As a student at UW Seattle, I\'ve been exposed to a diverse and stimulating learning environment. The professors\' expertise and dedication have inspired me to pursue my passions further. UW Seattle\'s extensive resources and opportunities have allowed me to explore various fields and develop a well-rounded skillset.
+    </item>
+        <item>
+        My semester in Spain has been a transformative journey of self-discovery and academic growth. The campus life and educational system in Spain are distinct from what I was accustomed to, and it has been an eye-opening experience.
+        I\'ve had the opportunity to engage in cross-cultural discussions, collaborating with students from diverse backgrounds. This exposure has broadened my perspectives and enhanced my critical thinking abilities.
+        The Spanish faculty\'s passion for teaching and their supportive approach have inspired me to excel academically. I\'ve been encouraged to explore my interests and pursue research in my field of study.
+        Beyond the classroom, I\'ve immersed myself in the local culture, attending traditional festivals, and savoring authentic Spanish delicacies. The study abroad experience has not only advanced my academic pursuits but also enriched my personal life in countless ways.
+        I\'ll forever cherish the memories of my time in Spain and the friendships I\'ve forged. This experience has instilled in me a love for travel and cultural exploration that will stay with me for a lifetime.
+    </item>
+        <item>
+        Studying at UW Tacoma has been a life-changing experience for me. The campus environment is inclusive and fosters both personal and academic growth. I have made lifelong friends and developed valuable connections with faculty and mentors. UW Tacoma has truly prepared me for a successful future.
+    </item>
+        <item>
+        As a student at UW Seattle, I\'ve been exposed to a diverse and stimulating learning environment. The professors\' expertise and dedication have inspired me to pursue my passions further. UW Seattle\'s extensive resources and opportunities have allowed me to explore various fields and develop a well-rounded skillset.
+    </item>
+        <item>
+        My semester in Spain has been a transformative journey of self-discovery and academic growth. The campus life and educational system in Spain are distinct from what I was accustomed to, and it has been an eye-opening experience.
+        I\'ve had the opportunity to engage in cross-cultural discussions, collaborating with students from diverse backgrounds. This exposure has broadened my perspectives and enhanced my critical thinking abilities.
+        The Spanish faculty\'s passion for teaching and their supportive approach have inspired me to excel academically. I\'ve been encouraged to explore my interests and pursue research in my field of study.
+        Beyond the classroom, I\'ve immersed myself in the local culture, attending traditional festivals, and savoring authentic Spanish delicacies. The study abroad experience has not only advanced my academic pursuits but also enriched my personal life in countless ways.
+        I\'ll forever cherish the memories of my time in Spain and the friendships I\'ve forged. This experience has instilled in me a love for travel and cultural exploration that will stay with me for a lifetime.
+    </item>
+        <item>
+        Studying at UW Tacoma has been a life-changing experience for me. The campus environment is inclusive and fosters both personal and academic growth. I have made lifelong friends and developed valuable connections with faculty and mentors. UW Tacoma has truly prepared me for a successful future.
+    </item>
+        <item>
+        As a student at UW Seattle, I\'ve been exposed to a diverse and stimulating learning environment. The professors\' expertise and dedication have inspired me to pursue my passions further. UW Seattle\'s extensive resources and opportunities have allowed me to explore various fields and develop a well-rounded skillset.
+    </item>
+        <item>
+        My semester in Spain has been a transformative journey of self-discovery and academic growth. The campus life and educational system in Spain are distinct from what I was accustomed to, and it has been an eye-opening experience.
+        I\'ve had the opportunity to engage in cross-cultural discussions, collaborating with students from diverse backgrounds. This exposure has broadened my perspectives and enhanced my critical thinking abilities.
+        The Spanish faculty\'s passion for teaching and their supportive approach have inspired me to excel academically. I\'ve been encouraged to explore my interests and pursue research in my field of study.
+        Beyond the classroom, I\'ve immersed myself in the local culture, attending traditional festivals, and savoring authentic Spanish delicacies. The study abroad experience has not only advanced my academic pursuits but also enriched my personal life in countless ways.
+        I\'ll forever cherish the memories of my time in Spain and the friendships I\'ve forged. This experience has instilled in me a love for travel and cultural exploration that will stay with me for a lifetime.
+    </item>
+        <item>
+        As a student at UW Seattle, I\'ve been exposed to a diverse and stimulating learning environment. The professors\' expertise and dedication have inspired me to pursue my passions further. UW Seattle\'s extensive resources and opportunities have allowed me to explore various fields and develop a well-rounded skillset.
+    </item>
+    </string-array>
+
+
+
+
+
+
 </resources>
