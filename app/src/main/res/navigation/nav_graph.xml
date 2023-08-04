@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.main.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_viewTestimonialsFragment"
+            app:destination="@id/viewTestimonialsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_viewNewsFragment"
+            app:destination="@id/viewNewsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_preFlightInfoFragment"
+            app:destination="@id/preFlightInfoFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_scholarshipInfoFragment"
+            app:destination="@id/scholarshipInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTestimonialsFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.ViewTestimonialsFragment"
+        android:label="fragment_view_testimonials"
+        tools:layout="@layout/fragment_view_testimonials" />
+    <fragment
+        android:id="@+id/viewNewsFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.news.views.ViewNewsFragment"
+        android:label="fragment_view_news"
+        tools:layout="@layout/fragment_view_news" />
+    <fragment
+        android:id="@+id/preFlightInfoFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.info.PreFlightInfoFragment"
+        android:label="fragment_pre_flight_info"
+        tools:layout="@layout/fragment_pre_flight_info" />
+    <fragment
+        android:id="@+id/scholarshipInfoFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.info.ScholarshipInfoFragment"
+        android:label="fragment_scholarship_info"
+        tools:layout="@layout/fragment_scholarship_info" />
+</navigation>

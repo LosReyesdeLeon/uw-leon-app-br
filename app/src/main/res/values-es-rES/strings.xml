@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UW Leon App BR</string>
+    <string name="spring">Primavera</string>
+    <string name="summer">Verano</string>
+    <string name="fall">Otoño</string>
+    <string name="winter">Invierno</string>
+    <string name="yyyy">AAAA</string>
+    <string name="name">Nombre</string>
+    <string name="student_id_number">Número de Identificación de UW (7 Dígitos)</string>
+    <string name="major">Especialidad</string>
+    <string name="submit_info">Entregar Información</string>
+    <string name="submit_info_prompt">Por favor contesta algunas preguntas para identificarte.</string>
+    <string name="testimonial_title">Título del Testimonio</string>
+    <string name="testimonial_content">Contenido del Testimonio</string>
+    <string name="preview_testimonial">Vista Previa del Testimonio</string>
+    <string name="submit_testimonial">Entregar Testimonio</string>
+    <string name="home_page_greeting">UW Centro Leon</string>
+</resources>
