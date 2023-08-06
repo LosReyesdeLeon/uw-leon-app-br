@@ -5,13 +5,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.time.Year;
 import java.util.Calendar;
 
 import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentSubmitStudentInfoBinding;
@@ -23,6 +25,8 @@ import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
 public class SubmitStudentInfoFragment extends Fragment {
 
     private FragmentSubmitStudentInfoBinding mBinding;
+
+    private Testimonial mTestimonial;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -38,16 +42,25 @@ public class SubmitStudentInfoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mBinding.submitStudentInfoButton.setOnClickListener(button -> processStudentInfo());
+
+        mTestimonial = null;
     }
 
     private void processStudentInfo() {
         String name = mBinding.editNameField.getText().toString();
-        int studentID = Integer.parseInt(mBinding.editStudentIDField.getText().toString());
-        String campus = "";
-        String season = "";
-        if (getSelectedCampus() != null && getSelectedSeason() != null) {
-            campus = getSelectedCampus();
-            season = getSelectedSeason();
+        int studentID;
+        try {
+            studentID = Integer.parseInt(mBinding.editStudentIDField.getText().toString());
+        } catch (NumberFormatException e) {
+            Toast.makeText(getContext(), "You cannot leave the ID field blank.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String campus;
+        String season;
+        if (getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup) != null
+                && getSelectedStringFromRadioButtonGroup(mBinding.seasonButtonGroup) != null) {
+            campus = getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup);
+            season = getSelectedStringFromRadioButtonGroup(mBinding.seasonButtonGroup);
         } else {
             // Toasts will already be shown for these two. Just cancel so we don't submit an
             // error.
@@ -56,8 +69,10 @@ public class SubmitStudentInfoFragment extends Fragment {
         int year = Integer.parseInt(mBinding.editYearField.getText().toString());
         String major = mBinding.editMajorField.getText().toString();
         if (!hasErrors(name, studentID, year, major)) {
-            // TODO: First I have to set up the navigation, and then I will program this to move on
-            // to the next fragment.
+            mTestimonial = new Testimonial(studentID, name, campus, major, season, year);
+            SubmitStudentInfoFragmentDirections.ActionSubmitStudentInfoFragmentToSubmitTestimonialFragment directions =
+                    SubmitStudentInfoFragmentDirections.actionSubmitStudentInfoFragmentToSubmitTestimonialFragment(mTestimonial);
+            Navigation.findNavController(getView()).navigate(directions);
         }
         // If it has errors, the hasErrors method will print the toast. We just want to stop so we
         // don't process invalid information.
@@ -92,36 +107,14 @@ public class SubmitStudentInfoFragment extends Fragment {
         return false;
     }
 
-    private String getSelectedCampus() {
-        if (mBinding.seattleButton.isSelected()) {
-            return Testimonial.SEATTLE;
-        } else if (mBinding.tacomaButton.isSelected()) {
-            return Testimonial.TACOMA;
-        } else if (mBinding.bothellButton.isSelected()) {
-            return Testimonial.BOTHELL;
-        } else {
-            // Nothing is selected.
-            Toast.makeText(getContext(),
-                    "You must select a campus.", Toast.LENGTH_SHORT).show();
+    private String getSelectedStringFromRadioButtonGroup(RadioGroup radioGroup) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        // If there is not a selected id.
+        if (selectedId == -1) {
             return null;
         }
-    }
-
-    private String getSelectedSeason() {
-        if (mBinding.springButton.isSelected()) {
-            return Testimonial.SPRING;
-        } else if (mBinding.summerButton.isSelected()) {
-            return Testimonial.SUMMER;
-        } else if (mBinding.fallButton.isSelected()) {
-            return Testimonial.FALL;
-        } else if (mBinding.winterButton.isSelected()) {
-            return Testimonial.WINTER;
-        } else {
-            // Nothing is selected.
-            Toast.makeText(getContext(), "You must select a Season for your program quarter.",
-                            Toast.LENGTH_SHORT).show();
-            return null;
-        }
+        RadioButton selectedButton = getActivity().findViewById(selectedId);
+        return selectedButton.getText().toString();
     }
 
 }

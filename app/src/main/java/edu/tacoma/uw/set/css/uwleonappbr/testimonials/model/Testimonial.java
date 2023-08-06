@@ -1,11 +1,13 @@
 package edu.tacoma.uw.set.css.uwleonappbr.testimonials.model;
 
+import java.io.Serializable;
+
 /**
  * This is the object class that holds all the information included in a testimonial submitted by
  * the student. Each field corresponds to a column in the Testimonials table in mysql database.
  * @author Devin Peevy
  */
-public class Testimonial {
+public class Testimonial implements Serializable {
 
     public final static String SEATTLE = "Seattle";
 
