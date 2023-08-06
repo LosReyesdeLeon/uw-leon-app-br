@@ -131,7 +131,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/submitButton"
+            android:id="@+id/submitStudentInfoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/submit_info"

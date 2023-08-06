@@ -1,12 +1,14 @@
 package edu.tacoma.uw.set.css.uwleonappbr.testimonials.model;
 
+import java.io.Serializable;
+
 /**
  * This is the object class that holds all the information included in a testimonial submitted by
  * the student. Each field corresponds to a column in the Testimonials table in mysql database.
  * @author Devin Peevy
  */
-public class Testimonial {
-    //test push
+
+public class Testimonial implements Serializable {
 
     public final static String SEATTLE = "Seattle";
 
@@ -30,7 +32,7 @@ public class Testimonial {
 
     private final String studentMajor;
 
-    private final String programSeason;
+    private final String programQuarter;
 
     private String testimonialTitle;
 
@@ -55,7 +57,7 @@ public class Testimonial {
         this.studentName = studentName;
         this.studentCampus = studentCampus;
         this.studentMajor = studentMajor;
-        this.programSeason = programSeason + " " + programYear;
+        this.programQuarter = programSeason + " " + programYear;
         this.testimonialTitle = null;
         this.testimonialContent = null;
     }
@@ -87,8 +89,8 @@ public class Testimonial {
         return studentMajor;
     }
 
-    public String getProgramSeason() {
-        return programSeason;
+    public String getProgramQuarter() {
+        return programQuarter;
     }
 
     public String getTestimonialTitle() {
