@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeScreenFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.HomeScreenFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="@string/home_page_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/homepage_testimonial_button"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="@+strings/testimonials_content_description"
+        app:layout_constraintBottom_toTopOf="@+id/homepage_news_button"
+        app:layout_constraintEnd_toStartOf="@+id/homepage_preflight_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting"
+        app:srcCompat="@drawable/ic_testimonial_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/homepage_preflight_button"
+        android:layout_width="108dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@+strings/preflight_content_description"
+        app:layout_constraintBottom_toTopOf="@+id/homepage_scholarships_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homepage_testimonial_button"
+        app:layout_constraintTop_toBottomOf="@+id/greeting"
+        app:srcCompat="@drawable/ic_preflight_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/homepage_news_button"
+        android:layout_width="111dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="236dp"
+        android:contentDescription="@+strings/news_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homepage_scholarships_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_testimonial_button"
+        app:srcCompat="@drawable/ic_newspaper_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/homepage_scholarships_button"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="233dp"
+        android:contentDescription="@+strings/scholarships_content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homepage_news_button"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_preflight_button"
+        app:srcCompat="@drawable/ic_scholarship_black_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

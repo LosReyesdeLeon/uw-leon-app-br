@@ -7,6 +7,7 @@ import java.io.Serializable;
  * the student. Each field corresponds to a column in the Testimonials table in mysql database.
  * @author Devin Peevy
  */
+
 public class Testimonial implements Serializable {
 
     public final static String SEATTLE = "Seattle";
