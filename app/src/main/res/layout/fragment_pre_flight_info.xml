@@ -1,14 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".info.PreFlightInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="416dp"
+        android:layout_height="25dp"
+        android:src="@drawable/bar_rtangle"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-3dp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="26dp"
+        android:layout_height="22dp"
+        android:src="@drawable/w_logo_white"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="587dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/pre_flight_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Pre-departure Information "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="PASSPORTS AND VISAS "
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You must have a valid passport to travel to Spain, and your passport must be valid for at least 6 months after the last day of the program." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You should consult the Spanish Consulate in San Francisco's webpage for up-to-date visa information and requirements. In general, if you are an American citizen AND:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="the program in which you are participating is less than 90 days (during a 180 day period), you do not need a visa to study in Spain." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="the program in which you are participating is longer than 90 days (during a 180 day period), you do need a student visa and should consult the Spanish Consulate in San Francisco's webpage for the application procedure." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If you are not an American citizen, you should consult with the Consulate of your nationality and/or the Spanish Consulate in San Francisco to determine if a visa is required." />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CASH AND FINANCES "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The currency used in Spain is the Euro. The conversion rate between the Euro and the U.S. Dollar can change daily, so please consult an online currency converter, such as the Oanda Currency Converter, for the current exchange rate." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The amount of spending money required in León will vary from person to person and program to program, depending on travel plans, eating preferences, and other personal expenses. Make sure to ask the director of your program how many meals per day (if any) are included in the program fee, how many meals you will have to pay for out of pocket, and if there are any additional expenses not covered by the program fee." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="It may be helpful to have some Euros for your arrival, although ATMs can be found in most major airports in Spain and should allow you to withdraw Euros from your American bank account." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Credit and debit cards are used widely throughout Spain and are a convenient way to obtain local currency when traveling abroad. Using your credit or debit card will save you the time of waiting in lines at the bank or at a casa de cambio (exchange office), and the exchange rate is usually better. They can also because be replaced relatively easily if lost or stolen, and are accepted in most shops and Spanish ATMs." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Be sure to inform your bank and/or credit card company that you will be using your card in Spain, and confirm with them the following before you leave: international cash advance charges, your PIN numbers, and from which account your money will be drawn." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Before you leave, make sure that you have finalized all financial aid paper work so that you do not run into financial difficulty once you are abroad. Bring with you the name and contact information of your Student Loan Officer, in case you need to contact him/her while in Spain." />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

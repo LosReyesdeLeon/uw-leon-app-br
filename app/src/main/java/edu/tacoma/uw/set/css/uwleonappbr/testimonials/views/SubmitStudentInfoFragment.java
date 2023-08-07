@@ -2,23 +2,119 @@ package edu.tacoma.uw.set.css.uwleonappbr.testimonials.views;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
-import edu.tacoma.uw.set.css.uwleonappbr.R;
+import java.util.Calendar;
+
+import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentSubmitStudentInfoBinding;
+import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SubmitStudentInfoFragment extends Fragment {
 
+    private FragmentSubmitStudentInfoBinding mBinding;
+
+    private Testimonial mTestimonial;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_submit_student_info, container, false);
+        mBinding = FragmentSubmitStudentInfoBinding.inflate(inflater, container, false);
+        return mBinding.getRoot();
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view,
+                              @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        mBinding.submitStudentInfoButton.setOnClickListener(button -> processStudentInfo());
+
+        mTestimonial = null;
+    }
+
+    private void processStudentInfo() {
+        String name = mBinding.editNameField.getText().toString();
+        int studentID;
+        try {
+            studentID = Integer.parseInt(mBinding.editStudentIDField.getText().toString());
+        } catch (NumberFormatException e) {
+            Toast.makeText(getContext(), "You cannot leave the ID field blank.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String campus;
+        String season;
+        if (getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup) != null
+                && getSelectedStringFromRadioButtonGroup(mBinding.seasonButtonGroup) != null) {
+            campus = getSelectedStringFromRadioButtonGroup(mBinding.campusButtonGroup);
+            season = getSelectedStringFromRadioButtonGroup(mBinding.seasonButtonGroup);
+        } else {
+            // Toasts will already be shown for these two. Just cancel so we don't submit an
+            // error.
+            return;
+        }
+        int year = Integer.parseInt(mBinding.editYearField.getText().toString());
+        String major = mBinding.editMajorField.getText().toString();
+        if (!hasErrors(name, studentID, year, major)) {
+            mTestimonial = new Testimonial(studentID, name, campus, major, season, year);
+            SubmitStudentInfoFragmentDirections.ActionSubmitStudentInfoFragmentToSubmitTestimonialFragment directions =
+                    SubmitStudentInfoFragmentDirections.actionSubmitStudentInfoFragmentToSubmitTestimonialFragment(mTestimonial);
+            Navigation.findNavController(getView()).navigate(directions);
+        }
+        // If it has errors, the hasErrors method will print the toast. We just want to stop so we
+        // don't process invalid information.
+    }
+
+    private boolean hasErrors(String name, int studentID, int year, String major) {
+        if (name.isEmpty()) {
+            Toast.makeText(getContext(),
+                    "Name field may not be left blank.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (studentID < 999999) {
+            Toast.makeText(getContext(),
+                    "Student ID number must be 7 digits long.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (year < 2010) {
+            Toast.makeText(getContext(),
+                    "The UW León center was not open at that time.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (year > Calendar.getInstance().get(Calendar.YEAR)) {
+            Toast.makeText(getContext(),
+                    "You cannot submit a testimonial from the future.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (major.isEmpty()) {
+            Toast.makeText(getContext(),
+                    "Major field may not be left blank.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+
+    private String getSelectedStringFromRadioButtonGroup(RadioGroup radioGroup) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        // If there is not a selected id.
+        if (selectedId == -1) {
+            return null;
+        }
+        RadioButton selectedButton = getActivity().findViewById(selectedId);
+        return selectedButton.getText().toString();
+    }
+
 }
