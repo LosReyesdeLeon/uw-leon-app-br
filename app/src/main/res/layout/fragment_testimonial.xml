@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp" >
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/student_campus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/program_quarter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/program_quarter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program Quarter"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/student_campus"
+        app:layout_constraintLeft_toRightOf="@id/student_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/student_campus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Campus"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/student_major"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/program_quarter"
+        app:layout_constraintTop_toBottomOf="@id/student_name" />
+
+    <TextView
+        android:id="@+id/student_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Major"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/testimonial_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/program_quarter"
+        app:layout_constraintTop_toBottomOf="@id/student_campus" />
+
+    <TextView
+        android:id="@+id/testimonial_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testimonial Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/testimonial_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/student_major" />
+
+    <TextView
+        android:id="@+id/testimonial_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testimonial Content Testimonial Content Testimonial Content Testimonial
+        Content Testimonial Content Testimonial Content"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/divider_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/testimonial_title" />
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
