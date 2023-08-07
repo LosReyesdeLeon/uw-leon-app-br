@@ -27,7 +27,11 @@
         android:id="@+id/viewTestimonialsFragment"
         android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.ViewTestimonialsFragment"
         android:label="fragment_view_testimonials"
-        tools:layout="@layout/fragment_view_testimonials" />
+        tools:layout="@layout/fragment_view_testimonials" >
+        <action
+            android:id="@+id/action_viewTestimonialsFragment_to_submitStudentInfoFragment"
+            app:destination="@id/submitStudentInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewNewsFragment"
         android:name="edu.tacoma.uw.set.css.uwleonappbr.news.views.ViewNewsFragment"
@@ -43,4 +47,32 @@
         android:name="edu.tacoma.uw.set.css.uwleonappbr.info.ScholarshipInfoFragment"
         android:label="fragment_scholarship_info"
         tools:layout="@layout/fragment_scholarship_info" />
+    <fragment
+        android:id="@+id/submitStudentInfoFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.SubmitStudentInfoFragment"
+        android:label="SubmitStudentInfoFragment" >
+        <action
+            android:id="@+id/action_submitStudentInfoFragment_to_submitTestimonialFragment"
+            app:destination="@id/submitTestimonialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitTestimonialFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.SubmitTestimonialFragment"
+        android:label="SubmitTestimonialFragment" >
+        <action
+            android:id="@+id/action_submitTestimonialFragment_to_testimonialPreviewFragment"
+            app:destination="@id/testimonialPreviewFragment" />
+        <argument
+            android:name="testimonial"
+            app:argType="edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial" />
+    </fragment>
+    <fragment
+        android:id="@+id/testimonialPreviewFragment"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.testimonials.views.TestimonialPreviewFragment"
+        android:label="fragment_testimonial_preview"
+        tools:layout="@layout/fragment_testimonial_preview" >
+        <argument
+            android:name="testimonial"
+            app:argType="edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial" />
+    </fragment>
 </navigation>

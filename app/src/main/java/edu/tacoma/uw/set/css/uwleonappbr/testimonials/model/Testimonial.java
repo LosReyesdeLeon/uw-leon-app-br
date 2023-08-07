@@ -63,6 +63,32 @@ public class Testimonial implements Serializable {
     }
 
     /**
+     * This is how a Testimonial is going to be constructed by the SubmitStudentInfoFragment.
+     * @param studentID 7 digit UW student id number.
+     * @param studentName The first and last name of the student.
+     * @param studentCampus The UW campus the student normally attends: SEATTLE, TACOMA, or BOTHELL.
+     * @param studentMajor The student's UW major.
+     * @param programQuarter The quarter of the student's program at UW Leon center.
+     * @param testimonialTitle The title of the testimonial.
+     * @param testimonialContent the body of the testimonial.
+     */
+    public Testimonial(int studentID,
+                       String studentName,
+                       String studentCampus,
+                       String studentMajor,
+                       String programQuarter,
+                       String testimonialTitle,
+                       String testimonialContent) {
+        this.studentID = studentID;
+        this.studentName = studentName;
+        this.studentCampus = studentCampus;
+        this.studentMajor = studentMajor;
+        this.programQuarter = programQuarter;
+        this.testimonialTitle = testimonialTitle;
+        this.testimonialContent = testimonialContent;
+    }
+
+    /**
      * The SubmitTestimonialFragment will then complete construction using this method.
      * @param testimonialTitle A short sentence/phrase to describe the student's experience MAX: 50.
      * @param testimonialContent The content of the testimonial MAX: 1,000.
