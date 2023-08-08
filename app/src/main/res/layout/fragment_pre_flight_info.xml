@@ -132,12 +132,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/be_sure_to_inform_your_bank_and_or_credit_card_company_that_you_will_be_using_your_card_in_spain_and_confirm_with_them_the_following_before_you_leave_international_cash_advance_charges_your_pin_numbers_and_from_which_account_your_money_will_be_drawn" />
+                    android:text="Be sure to inform your bank and/or credit card company that you will be using your card in Spain, and confirm with them the following before you leave: international cash advance charges, your PIN numbers, and from which account your money will be drawn." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain" />
+                    android:text="Before you leave, make sure that you have finalized all financial aid paper work so that you do not run into financial difficulty once you are abroad. Bring with you the name and contact information of your Student Loan Officer, in case you need to contact him/her while in Spain." />
 
                 <TextView
                     android:layout_width="match_parent"
