@@ -66,6 +66,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/pre_departure_information"
+                    android:textColor="#85754D"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
