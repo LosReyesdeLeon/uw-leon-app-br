@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".testimonials.views.SubmitTestimonialFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/editTitleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/testimonial_title"
+            android:inputType="textMultiLine"
+            android:paddingVertical="20dp"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"/>
+
+        <EditText
+            android:id="@+id/editContentField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/testimonial_content"
+            android:inputType="textMultiLine"
+            android:paddingVertical="20dp"
+            android:textSize="20dp"
+            android:layout_marginVertical="20dp"/>
+
+        <Button
+            android:id="@+id/previewTestimonialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preview_testimonial"
+            android:layout_marginVertical="20dp"
+            android:paddingVertical="20dp"
+            android:layout_marginHorizontal="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
