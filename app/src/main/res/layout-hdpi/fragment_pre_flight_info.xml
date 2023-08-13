@@ -21,9 +21,8 @@
         android:layout_width="26dp"
         android:layout_height="22dp"
         android:src="@drawable/w_logo_white"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="-2dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -40,8 +39,8 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <LinearLayout
-        android:layout_width="323dp"
-        android:layout_height="587dp"
+        android:layout_width="307dp"
+        android:layout_height="558dp"
         android:layout_marginTop="45dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +66,7 @@
                     android:padding="10dp"
                     android:text="Pre-departure Information "
                     android:textSize="20sp"
+
                     android:textStyle="bold" />
 
                 <TextView
@@ -80,26 +80,67 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
                     android:text="You must have a valid passport to travel to Spain, and your passport must be valid for at least 6 months after the last day of the program." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
                     android:text="You should consult the Spanish Consulate in San Francisco's webpage for up-to-date visa information and requirements. In general, if you are an American citizen AND:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
                     android:text="the program in which you are participating is less than 90 days (during a 180 day period), you do not need a visa to study in Spain." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
                     android:text="the program in which you are participating is longer than 90 days (during a 180 day period), you do need a student visa and should consult the Spanish Consulate in San Francisco's webpage for the application procedure." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
                     android:text="If you are not an American citizen, you should consult with the Consulate of your nationality and/or the Spanish Consulate in San Francisco to determine if a visa is required." />
 
                 <TextView
@@ -132,12 +173,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="be_sure_to_inform_your_bank_and_or_credit_card_company_that_you_will_be_using_your_card_in_spain_and_confirm_with_them_the_following_before_you_leave_international_cash_advance_charges_your_pin_numbers_and_from_which_account_your_money_will_be_drawn" />
+                    android:text="Be sure to inform your bank and/or credit card company that you will be using your card in Spain, and confirm with them the following before you leave: international cash advance charges, your PIN numbers, and from which account your money will be drawn." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain" />
+                    android:layout_marginBottom="10dp"
+                    android:text="Before you leave, make sure that you have finalized all financial aid paper work so that you do not run into financial difficulty once you are abroad. Bring with you the name and contact information of your Student Loan Officer, in case you need to contact him/her while in Spain." />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -191,7 +233,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Living with a family abroad is an exciting experience, and is a great way to integrate yourself into Spanish culture. If the lodging for your program is with families, expect to get information about who you will be living with before you leave. While in your host family's home, you will have your own individual room, and they will do your laundry. Three meals a day are included in the home stays, and families will wait for you to come home to eat. Social life in Spain happens in the street. Please keep in mind that social life in Spain happens in the street. If you want a friend to come over to the house, please discuss this with your family beforehand. Also, absolutely no alcohol should be brought into your host family’s house."
-                android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="10dp" />
 
                 <Space
                     android:layout_width="match_parent"

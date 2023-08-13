@@ -1,81 +1,66 @@
 package edu.tacoma.uw.set.css.uwleonappbr.testimonials.model;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.tacoma.uw.set.css.uwleonappbr.R;
+import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentTestimonialBinding;
 
 public class TestimonialsRecyclerViewAdapter
-        extends RecyclerView.Adapter<TestimonialsRecyclerViewAdapter.MyViewHolder> {
+        extends RecyclerView.Adapter<TestimonialsRecyclerViewAdapter.ViewHolder> {
 
-    Context context;
-    ArrayList<Testimonial> testimonialsList;
+    private final List<Testimonial> testimonials;
 
-    public TestimonialsRecyclerViewAdapter(Context context, ArrayList<Testimonial> testimonialsList) {
-        this.context = context;
-        this.testimonialsList = testimonialsList;
+    public TestimonialsRecyclerViewAdapter(List<Testimonial> testimonials) {
+        this.testimonials = testimonials;
     }
+
     @NonNull
     @Override
-    public TestimonialsRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //This inflate the layout ( giving a look to our rows)
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.fragment_testimonial_detail,parent, false);
-
-        return new TestimonialsRecyclerViewAdapter.MyViewHolder(view);
+    public TestimonialsRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.fragment_testimonial, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TestimonialsRecyclerViewAdapter.MyViewHolder holder, int position) {
-        //assigning values to the views we created in the layout file
-        // based on the position of the recycler view
-        holder.studentName.setText(testimonialsList.get(position).getStudentName());
-        holder.campus.setText(testimonialsList.get(position).getStudentCampus());
-        holder.quarter.setText(testimonialsList.get(position).getProgramQuarter());
-        holder.studentmajor.setText(testimonialsList.get(position).getStudentMajor());
-        holder.titleT.setText(testimonialsList.get(position).getTestimonialTitle());
-        holder.contentT.setText(testimonialsList.get(position).getTestimonialContent());
-        holder.studentImageView.setImageResource(testimonialsList.get(position).getImageStudent());
-
-
-
+    public void onBindViewHolder(@NonNull TestimonialsRecyclerViewAdapter.ViewHolder holder, int position) {
+        holder.setItem(testimonials.get(position));
     }
 
     @Override
     public int getItemCount() {
-        // recycler view wants to know number of items in our file
-        return testimonialsList.size();
+        return testimonials.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        //similar to on create view method
+        public final View mView;
 
-        ImageView studentImageView;
-        TextView studentName, campus, quarter, titleT, contentT,studentmajor;
+        public FragmentTestimonialBinding mBinding;
 
+        public Testimonial mItem;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View view) {
+            super(view);
+            mView = view;
+            mBinding = FragmentTestimonialBinding.bind(view);
+        }
 
-            super(itemView);
-
-            studentImageView = itemView.findViewById(R.id.studentImage);
-            studentName = itemView.findViewById(R.id.studenName);
-            campus = itemView.findViewById(R.id.campus);
-            quarter = itemView.findViewById(R.id.quarter);
-            studentmajor = itemView.findViewById(R.id.uw_major);
-            titleT = itemView.findViewById(R.id.titleT);
-            contentT = itemView.findViewById(R.id.contentT);
-
+        public void setItem(final Testimonial item) {
+            mItem = item;
+            mBinding.studentName.setText(item.getStudentName());
+            mBinding.programQuarter.setText(item.getProgramQuarter());
+            mBinding.studentCampus.setText(item.getStudentCampus());
+            mBinding.studentMajor.setText(item.getStudentMajor());
+            mBinding.testimonialTitle.setText(item.getTestimonialTitle());
+            mBinding.testimonialContent.setText(item.getTestimonialContent());
         }
     }
 }
