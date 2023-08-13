@@ -6,10 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import edu.tacoma.uw.set.css.uwleonappbr.R;
 import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentViewTestimonialsBinding;
@@ -33,8 +37,20 @@ public class ViewTestimonialsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_testimonials, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_view_testimonials, container, false);
+
+        FloatingActionButton fabButton = rootView.findViewById(R.id.fab_button);
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Open the Add Testimonial", Snackbar.LENGTH_SHORT).show();
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_viewTestimonialsFragment_to_submitStudentInfoFragment);
+            }
+
+        });
+
+        return rootView;
     }
 
     @Override
@@ -44,6 +60,7 @@ public class ViewTestimonialsFragment extends Fragment {
 
         testimonialViewModel.addTestimonialListObserver(getViewLifecycleOwner(), testimonials -> {
             if (!testimonials.isEmpty()) {
+
                 binding.layoutRoot.setAdapter(new TestimonialsRecyclerViewAdapter(testimonials));
             }
         });

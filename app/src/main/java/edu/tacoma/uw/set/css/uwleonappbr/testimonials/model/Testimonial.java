@@ -53,14 +53,14 @@ public class Testimonial implements Serializable {
                        String studentCampus,
                        String studentMajor,
                        String programSeason,
-                       int programYear, 
-                       int imageStudent) {
+                       int programYear
+                       ) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentCampus = studentCampus;
         this.studentMajor = studentMajor;
         this.programQuarter = programSeason + " " + programYear;
-        this.imageStudent = imageStudent;
+
         this.testimonialTitle = null;
         this.testimonialContent = null;
     }
