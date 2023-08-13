@@ -152,7 +152,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/health_care"
                     android:textColor="#4B2E83" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -177,7 +176,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/the_leon_center_has_high_speed_wi_fi_that_you_will_be_able_to_access_from_your_laptop_tablet_or_smartphone_when_you_are_at_the_center_if_you_are_living_with_a_host_family_or_in_a_university_residence_hall_you_will_also_have_wi_fi_at_home_those_students_living_in_apartments_will_not_have_access_to_wi_fi_at_home_but_there_is_free_wi_fi_available_at_many_caf_s_and_restaurants_in_leon_as_well_as_internet_caf_s_throughout_the_city_it_may_also_be_possible_to_purchase_a_portable_usb_modem_from_a_local_cell_phone_company_that_will_allow_you_to_access_the_internet_from_anywhere_in_spain"
                     android:layout_marginBottom="10dp"/>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
