@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import edu.tacoma.uw.set.css.uwleonappbr.R;
 import edu.tacoma.uw.set.css.uwleonappbr.databinding.FragmentTestimonialPreviewBinding;
 import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial;
 import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.TestimonialViewModel;
@@ -74,5 +76,8 @@ public class TestimonialPreviewFragment extends Fragment {
         Log.i(getClass().toString(), "submitTestimonial: submitTestimonial called.");
         testimonialViewModel.addTestimonialToDatabase(mTestimonial);
         Log.i(getClass().toString(), "submitTestimonial: submitTestimonial finished.");
+        Toast.makeText(getContext(), "Testimonial submitted.", Toast.LENGTH_LONG).show();
+        Navigation.findNavController(getView())
+                .navigate(R.id.action_testimonialPreviewFragment_to_homeScreenFragment);
     }
 }

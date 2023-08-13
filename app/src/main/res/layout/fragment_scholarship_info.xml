@@ -105,13 +105,12 @@
                     android:text="@string/office_of_global_affairs_study_abroad_scholarship"
                     android:textColor="#4B2E83"
                     android:textStyle="bold" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/generously_funded_through_the_bamford_foundation_the_office_of_global_affairs_will_provide_several_1_000_scholarships_to_students_participating_in_study_abroad_programs"
                     android:layout_marginBottom="10dp"/>
-
+              
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,7 +118,7 @@
                     android:text="@string/still_have_questions"
                     android:textColor="#4B2E83"
                     android:textStyle="bold" />
-
+              
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,7 +136,6 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="50dp" />
-
 
             </LinearLayout>
 
