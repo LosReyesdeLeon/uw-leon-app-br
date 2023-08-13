@@ -22,7 +22,8 @@
         android:layout_height="22dp"
         android:src="@drawable/w_logo_white"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="1dp" />
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -50,10 +51,11 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <LinearLayout
-                android:id="@+id/pre_flight_info"
+                android:id="@+id/scholarship_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -64,7 +66,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Pre-departure Information "
+                    android:text="@string/pre_departure_information"
+                    android:textColor="#85754D"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -72,127 +75,133 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="PASSPORTS AND VISAS "
+                    android:text="@string/passports_and_visas"
+                    android:textColor="#4B2E83"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="You must have a valid passport to travel to Spain, and your passport must be valid for at least 6 months after the last day of the program." />
+                    android:text="@string/you_must_have_a_valid_passport_to_travel_to_spain_and_your_passport_must_be_valid_for_at_least_6_months_after_the_last_day_of_the_program" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="You should consult the Spanish Consulate in San Francisco's webpage for up-to-date visa information and requirements. In general, if you are an American citizen AND:" />
+                    android:text="@string/you_should_consult_the_spanish_consulate_in_san_francisco_s_webpage_for_up_to_date_visa_information_and_requirements_in_general_if_you_are_an_american_citizen_and" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="the program in which you are participating is less than 90 days (during a 180 day period), you do not need a visa to study in Spain." />
+                    android:text="@string/the_program_in_which_you_are_participating_is_less_than_90_days_during_a_180_day_period_you_do_not_need_a_visa_to_study_in_spain" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="the program in which you are participating is longer than 90 days (during a 180 day period), you do need a student visa and should consult the Spanish Consulate in San Francisco's webpage for the application procedure." />
+                    android:text="@string/the_program_in_which_you_are_participating_is_longer_than_90_days_during_a_180_day_period_you_do_need_a_student_visa_and_should_consult_the_spanish_consulate_in_san_francisco_s_webpage_for_the_application_procedure" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="If you are not an American citizen, you should consult with the Consulate of your nationality and/or the Spanish Consulate in San Francisco to determine if a visa is required." />
+                    android:text="@string/if_you_are_not_an_american_citizen_you_should_consult_with_the_consulate_of_your_nationality_and_or_the_spanish_consulate_in_san_francisco_to_determine_if_a_visa_is_required"
+                    android:layout_marginBottom="10dp" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CASH AND FINANCES "
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/cash_and_finances"
+                    android:textColor="#4B2E83"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The currency used in Spain is the Euro. The conversion rate between the Euro and the U.S. Dollar can change daily, so please consult an online currency converter, such as the Oanda Currency Converter, for the current exchange rate." />
+                    android:text="@string/the_currency_used_in_spain_is_the_euro_the_conversion_rate_between_the_euro_and_the_u_s_dollar_can_change_daily_so_please_consult_an_online_currency_converter_such_as_the_oanda_currency_converter_for_the_current_exchange_rate" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The amount of spending money required in León will vary from person to person and program to program, depending on travel plans, eating preferences, and other personal expenses. Make sure to ask the director of your program how many meals per day (if any) are included in the program fee, how many meals you will have to pay for out of pocket, and if there are any additional expenses not covered by the program fee." />
+                    android:text="@string/the_amount_of_spending_money_required_in_le_n_will_vary_from_person_to_person_and_program_to_program_depending_on_travel_plans_eating_preferences_and_other_personal_expenses_make_sure_to_ask_the_director_of_your_program_how_many_meals_per_day_if_any_are_included_in_the_program_fee_how_many_meals_you_will_have_to_pay_for_out_of_pocket_and_if_there_are_any_additional_expenses_not_covered_by_the_program_fee" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="It may be helpful to have some Euros for your arrival, although ATMs can be found in most major airports in Spain and should allow you to withdraw Euros from your American bank account." />
+                    android:text="@string/it_may_be_helpful_to_have_some_euros_for_your_arrival_although_atms_can_be_found_in_most_major_airports_in_spain_and_should_allow_you_to_withdraw_euros_from_your_american_bank_account" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Credit and debit cards are used widely throughout Spain and are a convenient way to obtain local currency when traveling abroad. Using your credit or debit card will save you the time of waiting in lines at the bank or at a casa de cambio (exchange office), and the exchange rate is usually better. They can also because be replaced relatively easily if lost or stolen, and are accepted in most shops and Spanish ATMs." />
+                    android:text="@string/credit_and_debit_cards_are_used_widely_throughout_spain_and_are_a_convenient_way_to_obtain_local_currency_when_traveling_abroad_using_your_credit_or_debit_card_will_save_you_the_time_of_waiting_in_lines_at_the_bank_or_at_a_casa_de_cambio_exchange_office_and_the_exchange_rate_is_usually_better_they_can_also_because_be_replaced_relatively_easily_if_lost_or_stolen_and_are_accepted_in_most_shops_and_spanish_atms" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Be sure to inform your bank and/or credit card company that you will be using your card in Spain, and confirm with them the following before you leave: international cash advance charges, your PIN numbers, and from which account your money will be drawn." />
+                    android:text="@string/be_sure_to_inform_your_bank_and_or_credit_card_company_that_you_will_be_using_your_card_in_spain_and_confirm_with_them_the_following_before_you_leave_international_cash_advance_charges_your_pin_numbers_and_from_which_account_your_money_will_be_drawn" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Before you leave, make sure that you have finalized all financial aid paper work so that you do not run into financial difficulty once you are abroad. Bring with you the name and contact information of your Student Loan Officer, in case you need to contact him/her while in Spain."
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HEALTH CARE"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Health Insurance"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Beginning January 1, 2011, all UW students participating in a departmental study abroad program are required to purchase the UW Study Abroad Insurance."
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ACCESS TO INTERNET"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="The Leon Center has high-speed wi-fi that you will be able to access from your laptop, tablet, or smartphone when you are at the Center. If you are living with a host family or in a university residence hall, you will also have wi-fi at home. Those students living in apartments will not have access to wi-fi at home, but there is free wi-fi available at many cafés and restaurants in Leon, as well as internet cafés throughout the city. It may also be possible to purchase a portable USB modem from a local cell phone company that will allow you to access the internet from anywhere in Spain."
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="CELL PHONES"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Using your American cell phone in Spain may be expensive, depending on the company you use. If that is the case, we recommend that you either bring an American cell phone that is not locked to a certain company and buy a Spanish SIM card, or that you buy a cheap phone once you get to Spain. SIM cards usually cost around 9€ and come with 3€ of credit, whereas a cheap phone will cost between 30-50€. You may want to agree on which cell phone company you will use as a group, as it will make communication between you cheaper. Please be aware that when you buy a SIM card or cell phone in Spain, you will be required to show your passport."
-                    android:layout_marginBottom="10dp"/>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="LIVING WITH HOST FAMILIES"
-                    android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Living with a family abroad is an exciting experience, and is a great way to integrate yourself into Spanish culture. If the lodging for your program is with families, expect to get information about who you will be living with before you leave. While in your host family's home, you will have your own individual room, and they will do your laundry. Three meals a day are included in the home stays, and families will wait for you to come home to eat. Social life in Spain happens in the street. Please keep in mind that social life in Spain happens in the street. If you want a friend to come over to the house, please discuss this with your family beforehand. Also, absolutely no alcohol should be brought into your host family’s house."
+                    android:text="@string/before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain"
                     android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/health_care"
+                    android:textColor="#4B2E83" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_insurance"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beginning_january_1_2011_all_uw_students_participating_in_a_departmental_study_abroad_program_are_required_to_purchase_the_uw_study_abroad_insurance"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/access_to_internet"
+                    android:textColor="#4B2E83" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_leon_center_has_high_speed_wi_fi_that_you_will_be_able_to_access_from_your_laptop_tablet_or_smartphone_when_you_are_at_the_center_if_you_are_living_with_a_host_family_or_in_a_university_residence_hall_you_will_also_have_wi_fi_at_home_those_students_living_in_apartments_will_not_have_access_to_wi_fi_at_home_but_there_is_free_wi_fi_available_at_many_caf_s_and_restaurants_in_leon_as_well_as_internet_caf_s_throughout_the_city_it_may_also_be_possible_to_purchase_a_portable_usb_modem_from_a_local_cell_phone_company_that_will_allow_you_to_access_the_internet_from_anywhere_in_spain"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/cell_phones"
+                    android:textColor="#4B2E83" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/using_your_american_cell_phone_in_spain_may_be_expensive_depending_on_the_company_you_use_if_that_is_the_case_we_recommend_that_you_either_bring_an_american_cell_phone_that_is_not_locked_to_a_certain_company_and_buy_a_spanish_sim_card_or_that_you_buy_a_cheap_phone_once_you_get_to_spain_sim_cards_usually_cost_around_9_and_come_with_3_of_credit_whereas_a_cheap_phone_will_cost_between_30_50_you_may_want_to_agree_on_which_cell_phone_company_you_will_use_as_a_group_as_it_will_make_communication_between_you_cheaper_please_be_aware_that_when_you_buy_a_sim_card_or_cell_phone_in_spain_you_will_be_required_to_show_your_passport"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/living_with_host_families"
+                    android:textColor="#4B2E83" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/living_with_a_family_abroad_is_an_exciting_experience_and_is_a_great_way_to_integrate_yourself_into_spanish_culture_if_the_lodging_for_your_program_is_with_families_expect_to_get_information_about_who_you_will_be_living_with_before_you_leave_while_in_your_host_family_s_home_you_will_have_your_own_individual_room_and_they_will_do_your_laundry_three_meals_a_day_are_included_in_the_home_stays_and_families_will_wait_for_you_to_come_home_to_eat_social_life_in_spain_happens_in_the_street_please_keep_in_mind_that_social_life_in_spain_happens_in_the_street_if_you_want_a_friend_to_come_over_to_the_house_please_discuss_this_with_your_family_beforehand_also_absolutely_no_alcohol_should_be_brought_into_your_host_family_s_house"
+                    android:layout_marginBottom="20dp"/>
 
                 <Space
                     android:layout_width="match_parent"

@@ -74,5 +74,8 @@
         <argument
             android:name="testimonial"
             app:argType="edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.Testimonial" />
+        <action
+            android:id="@+id/action_testimonialPreviewFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
     </fragment>
 </navigation>
