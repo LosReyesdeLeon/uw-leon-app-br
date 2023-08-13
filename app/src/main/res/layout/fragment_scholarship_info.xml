@@ -65,18 +65,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/scholarships"
-                    android:textStyle="bold"
-                    android:textColor="#800080"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#85754D"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/fund_for_education_abroad"
-                    android:textStyle="bold"
-                    android:textColor="#800080"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -87,10 +87,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/gilman_scholarship"
-                    android:textStyle="bold"
-                    android:textColor="#800080"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -101,23 +101,24 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/office_of_global_affairs_study_abroad_scholarship"
-                    android:textStyle="bold"
-                    android:textColor="#800080"
-                    android:layout_marginBottom="10dp"/>
-
+                    android:textColor="#4B2E83"
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/generously_funded_through_the_bamford_foundation_the_office_of_global_affairs_will_provide_several_1_000_scholarships_to_students_participating_in_study_abroad_programs"
                     android:layout_marginBottom="10dp"/>
+              
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/still_have_questions"
-                    android:textColor="#800080"
-                    android:layout_marginBottom="10dp"/>
-
+                    android:textColor="#4B2E83"
+                    android:textStyle="bold" />
+              
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -125,12 +126,16 @@
                     android:layout_marginBottom="10dp"/>
 
                 <Button
+                    android:id="@+id/book_appointment_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/book_an_appointment"
                     android:layout_gravity="center"/>
 
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
 
             </LinearLayout>
 

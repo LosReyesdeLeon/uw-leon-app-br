@@ -67,6 +67,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/pre_departure_information"
+                    android:textColor="#85754D"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -75,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="@string/passports_and_visas"
+                    android:textColor="#4B2E83"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -108,8 +110,9 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cash_and_finances"
                     android:layout_marginBottom="10dp"
+                    android:text="@string/cash_and_finances"
+                    android:textColor="#4B2E83"
                     android:textStyle="bold" />
 
                 <TextView
@@ -140,14 +143,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain" />
+                    android:text="@string/before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain"
+                    android:layout_marginBottom="10dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/health_care"
-                    android:layout_marginBottom="10dp"/>
-
+                    android:textColor="#4B2E83" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,8 +167,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/access_to_internet"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -174,8 +179,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/cell_phones"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -187,8 +193,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/living_with_host_families"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
