@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,8 @@ public class ViewTestimonialsFragment extends Fragment {
 
         private TestimonialViewModel testimonialViewModel;
 
+        private FragmentViewTestimonialsBinding mBinding;
+
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -34,18 +37,25 @@ public class ViewTestimonialsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_testimonials, container, false);
+        mBinding = FragmentViewTestimonialsBinding.inflate(inflater, container, false);
+
+        return mBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         @NonNull FragmentViewTestimonialsBinding binding = FragmentViewTestimonialsBinding.bind(getView());
-
+        mBinding.addTestimonialButton.setOnClickListener(button -> goToSubmitStudentInfo());
         testimonialViewModel.addTestimonialListObserver(getViewLifecycleOwner(), testimonials -> {
             if (!testimonials.isEmpty()) {
                 binding.layoutRoot.setAdapter(new TestimonialsRecyclerViewAdapter(testimonials));
             }
         });
+    }
+
+    private void goToSubmitStudentInfo() {
+        Navigation.findNavController(requireView())
+                .navigate(R.id.action_viewTestimonialsFragment_to_submitStudentInfoFragment);
     }
 }
