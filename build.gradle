@@ -1,5 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+<<<<<<< Updated upstream
 plugins {
     id 'com.android.application' version '8.0.2' apply false
     id 'com.android.library' version '8.0.2' apply false
 }
+=======
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        def nav_version="2.5.3"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.library' version '8.1.0' apply false
+}
+>>>>>>> Stashed changes

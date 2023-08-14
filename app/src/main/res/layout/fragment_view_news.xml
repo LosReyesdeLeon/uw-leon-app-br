@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".news.views.ViewNewsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+    android:id="@+id/layoutRoot"
+    android:name=".edu.tacoma.uw.set.css.uwleonappbr.ViewNewsFragment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    app:layoutManager="LinearLayoutManager"
+    tools:listitem="@layout/fragment_articles_detail" />
