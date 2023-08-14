@@ -21,14 +21,14 @@ import edu.tacoma.uw.set.css.uwleonappbr.testimonials.model.TestimonialsRecycler
  */
 public class ViewTestimonialsFragment extends Fragment {
 
-    private TestimonialViewModel testimonialViewModel;
+        private TestimonialViewModel testimonialViewModel;
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        testimonialViewModel = new ViewModelProvider(getActivity()).get(TestimonialViewModel.class);
-        testimonialViewModel.getTestimonialsFromDatabase();
-    }
+        @Override
+        public void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            testimonialViewModel = new ViewModelProvider(getActivity()).get(TestimonialViewModel.class);
+            testimonialViewModel.getTestimonialsFromDatabase();
+        }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

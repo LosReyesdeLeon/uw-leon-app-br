@@ -47,7 +47,7 @@ public class HomeScreenFragment extends Fragment {
         myBinding = null;
     }
 
-    private void gotoTestimonials(){
+    private void gotoTestimonials() {
         //Log.d("HOME SCREEN FRAGMENT", "Testimonial button pressed");
         Navigation.findNavController(requireView())
                 .navigate(R.id.action_homeScreenFragment_to_viewTestimonialsFragment);
