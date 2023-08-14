@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<androidx.recyclerview.widget.RecyclerView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_root"
-    android:name="edu.tacoma.uw.set.css.uwleonappbr.ViewTestimonialsFragment"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    app:layoutManager="LinearLayoutManager"
-    tools:context=".testimonials.views.ViewTestimonialsFragment"
-    tools:listitem="@layout/fragment_testimonial" />
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/layout_root"
+        android:name="edu.tacoma.uw.set.css.uwleonappbr.ViewTestimonialsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".testimonials.views.ViewTestimonialsFragment"
+        tools:listitem="@layout/fragment_testimonial" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addTestimonialButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/plus_icon"
+        android:contentDescription="Add a new testimonial." />
+
+</RelativeLayout>
