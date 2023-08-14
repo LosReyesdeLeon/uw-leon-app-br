@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
         android:text="@string/home_page_greeting"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,64 +30,127 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/homepage_testimonial_button"
-        android:layout_width="113dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="6dp"
-        android:contentDescription="@+strings/testimonials_content_description"
-        app:layout_constraintBottom_toTopOf="@+id/homepage_news_button"
-        app:layout_constraintEnd_toStartOf="@+id/homepage_preflight_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greeting"
-        app:srcCompat="@drawable/ic_testimonial_black_24dp" />
 
     <ImageButton
-        android:id="@+id/homepage_preflight_button"
-        android:layout_width="108dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@+strings/preflight_content_description"
-        app:layout_constraintBottom_toTopOf="@+id/homepage_scholarships_button"
+        android:id="@+id/homepageNewsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homepage_testimonial_button"
-        app:layout_constraintTop_toBottomOf="@+id/greeting"
-        app:srcCompat="@drawable/ic_preflight_black_24dp" />
-
-    <ImageButton
-        android:id="@+id/homepage_news_button"
-        android:layout_width="111dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="236dp"
-        android:contentDescription="@+strings/news_content_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homepage_scholarships_button"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepage_testimonial_button"
-        app:srcCompat="@drawable/ic_newspaper_black_24dp" />
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_newspaper_black_24dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/homepage_scholarships_button"
-        android:layout_width="108dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="7dp"
+        android:id="@+id/homepageTestimonialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_testimonial_black_24dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/homepagePreflightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_preflight_black_24dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/homepageScholarshipsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepageTestimonialButton"
+        app:srcCompat="@drawable/ic_scholarship_black_24dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testimonials"
+        app:layout_constraintTop_toBottomOf="@+id/homepageTestimonialButton"
+        app:layout_constraintStart_toStartOf="@+id/homepageTestimonialButton"
+        app:layout_constraintEnd_toEndOf="@+id/homepageTestimonialButton"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pre-flight"
+        app:layout_constraintTop_toBottomOf="@+id/homepagePreflightButton"
+        app:layout_constraintStart_toStartOf="@+id/homepagePreflightButton"
+        app:layout_constraintEnd_toEndOf="@+id/homepagePreflightButton"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="News"
+        app:layout_constraintTop_toBottomOf="@+id/homepageNewsButton"
+        app:layout_constraintStart_toStartOf="@+id/homepageNewsButton"
+        app:layout_constraintEnd_toEndOf="@+id/homepageNewsButton"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scholarship"
+        app:layout_constraintTop_toBottomOf="@+id/homepageScholarshipsButton"
+        app:layout_constraintStart_toStartOf="@+id/homepageScholarshipsButton"
+        app:layout_constraintEnd_toEndOf="@+id/homepageScholarshipsButton"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:text="Contact Us!"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="233dp"
-        android:contentDescription="@+strings/scholarships_content_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homepage_news_button"
-        app:layout_constraintTop_toBottomOf="@+id/homepage_preflight_button"
-        app:srcCompat="@drawable/ic_scholarship_black_24dp" />
+        android:text="Director Name: Anthony Geist\nEmail: tgeist@uw.edu"
+        app:layout_constraintEnd_toEndOf="@+id/homepageScholarshipsButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:text="UW Leon Center"
+        android:textColor="#FFC107"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
