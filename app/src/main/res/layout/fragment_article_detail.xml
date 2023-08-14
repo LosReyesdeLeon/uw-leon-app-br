@@ -46,8 +46,7 @@
         android:layout_width="161dp"
         android:layout_height="48dp"
         android:layout_margin="5dp"
-        android:backgroundTint="#4B2E83"
-        android:text="Button"
+        android:text="Read More"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date"
         tools:ignore="HardcodedText" />
