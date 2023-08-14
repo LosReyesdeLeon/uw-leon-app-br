@@ -34,17 +34,6 @@ public class ArticlesRecyclerViewAdapter extends RecyclerView.Adapter<ArticlesRe
                 .from(parent.getContext())
                 .inflate(R.layout.fragment_article_detail, parent, false));
     }
-<<<<<<< Updated upstream
-=======
-    @SuppressLint("QueryPermissionsNeeded")
-    public void setItem(final Article item) {
-        mItem = item;
-        Glide.with(binding.image)
-                .load(item.getImage())
-                .override(550,400)
-                .centerCrop()
-                .into(binding.image);
->>>>>>> Stashed changes
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
