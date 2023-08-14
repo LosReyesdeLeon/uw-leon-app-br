@@ -21,8 +21,8 @@
         android:layout_width="26dp"
         android:layout_height="22dp"
         android:src="@drawable/w_logo_white"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -51,7 +51,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:id="@+id/scholarship_info"
@@ -75,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="@string/passports_and_visas"
+                    android:textColor="#4B2E83"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -108,8 +110,9 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cash_and_finances"
                     android:layout_marginBottom="10dp"
+                    android:text="@string/cash_and_finances"
+                    android:textColor="#4B2E83"
                     android:textStyle="bold" />
 
                 <TextView
@@ -135,19 +138,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="be_sure_to_inform_your_bank_and_or_credit_card_company_that_you_will_be_using_your_card_in_spain_and_confirm_with_them_the_following_before_you_leave_international_cash_advance_charges_your_pin_numbers_and_from_which_account_your_money_will_be_drawn" />
+                    android:text="@string/be_sure_to_inform_your_bank_and_or_credit_card_company_that_you_will_be_using_your_card_in_spain_and_confirm_with_them_the_following_before_you_leave_international_cash_advance_charges_your_pin_numbers_and_from_which_account_your_money_will_be_drawn" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain" />
+                    android:text="@string/before_you_leave_make_sure_that_you_have_finalized_all_financial_aid_paper_work_so_that_you_do_not_run_into_financial_difficulty_once_you_are_abroad_bring_with_you_the_name_and_contact_information_of_your_student_loan_officer_in_case_you_need_to_contact_him_her_while_in_spain"
+                    android:layout_marginBottom="10dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/health_care"
-                    android:layout_marginBottom="10dp"/>
-
+                    android:textColor="#4B2E83" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,8 +167,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/access_to_internet"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -174,8 +179,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/cell_phones"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -187,14 +193,15 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/living_with_host_families"
-                    android:layout_marginBottom="10dp"/>
+                    android:textColor="#4B2E83" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/living_with_a_family_abroad_is_an_exciting_experience_and_is_a_great_way_to_integrate_yourself_into_spanish_culture_if_the_lodging_for_your_program_is_with_families_expect_to_get_information_about_who_you_will_be_living_with_before_you_leave_while_in_your_host_family_s_home_you_will_have_your_own_individual_room_and_they_will_do_your_laundry_three_meals_a_day_are_included_in_the_home_stays_and_families_will_wait_for_you_to_come_home_to_eat_social_life_in_spain_happens_in_the_street_please_keep_in_mind_that_social_life_in_spain_happens_in_the_street_if_you_want_a_friend_to_come_over_to_the_house_please_discuss_this_with_your_family_beforehand_also_absolutely_no_alcohol_should_be_brought_into_your_host_family_s_house"
-                android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"/>
 
                 <Space
                     android:layout_width="match_parent"
